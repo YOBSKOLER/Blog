@@ -25,6 +25,7 @@ class DashboardPostController extends Controller
     public function create()
     {
         return view('Dashboard.Post.CreatePost');
+
     }
 
     /**
@@ -32,7 +33,9 @@ class DashboardPostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Post::create([
+            'title'=>request('title')
+        ]);
     }
 
     /**
