@@ -5,16 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class DashboardPostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-        return view('welcome');
-
+        return view('Dashboard.layout.Welcome');
+    }
+    public function allPosts()
+    {
+        return view('Dashboard.Post.Posts');
     }
 
     /**
@@ -22,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('Dashboard.Post.CreatePost');
     }
 
     /**
