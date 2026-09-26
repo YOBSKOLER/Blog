@@ -34,7 +34,14 @@ class DashboardPostController extends Controller
     public function store(Request $request)
     {
         Post::create([
-            'title'=>request('title')
+            'title'=>request('title'),
+            'slug'=>request('slug'),
+            'content'=>request('content'),
+            'tag'=>request('tag'),
+            'category'=>request('category'),
+            'published_at'=>request('published_at')
+
+
         ]);
     }
 
